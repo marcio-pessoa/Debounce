@@ -1,4 +1,4 @@
-/* Debounce.h - Avoid bounce effect
+/* Debounce.h - Avoid Bounce Effect Library
  * 
  * Author: Márcio Pessoa <marcio.pessoa@sciemon.com>
  * Contributors: none

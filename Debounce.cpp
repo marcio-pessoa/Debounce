@@ -1,4 +1,4 @@
-/* Debounce.cpp - Avoid bounce effect
+/* Debounce.cpp - Avoid Bounce Effect Library
  * 
  */
 
