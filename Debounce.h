@@ -16,18 +16,18 @@
 
 #include "Arduino.h"
 
-class Debounce
-{
-  public:
-    Debounce(byte pin, unsigned int period=50, bool pullup=false);
-    bool set(unsigned int period);
-    bool check();
-  private:
-    byte _pin;
-    unsigned int _period;
-    bool _soft_state;
-    bool _hard_state;
-    bool _pullup;
+class Debounce {
+ public:
+  Debounce(byte pin, unsigned int period = 50, bool pullup = false);
+  bool set(unsigned int period);
+  bool check();
+
+ private:
+  byte _pin;
+  unsigned int _period;
+  bool _soft_state;
+  bool _hard_state;
+  bool _pullup;
 };
 
 #endif

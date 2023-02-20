@@ -2,8 +2,8 @@
  *
  */
 
-#include "Arduino.h"
 #include "Debounce.h"
+#include "Arduino.h"
 
 /* Debounce
  *
@@ -81,4 +81,3 @@ bool Debounce::set(unsigned int period) {
   _period = period;
   return false;
 }
-
