@@ -5,21 +5,10 @@
 #include "Debounce.h"
 #include "Arduino.h"
 
-/* Debounce
- *
- * Description
- *   Blink LED without delay function.
- *
- *   RealTime (int pin, int millis_period, boolean state)
- *
- * Parameters
- *   pin: Arduino LED pin
- *   millis_period: Time period to define blink delay (milliseconds)
- *   state: Initial LED state
- *
- * Returns
- *   void
- */
+/// @brief Constructor
+/// @param pin
+/// @param period
+/// @param pullup
 Debounce::Debounce(byte pin, unsigned int period, bool pullup) {
   _pin = pin;
   _period = period;
@@ -34,19 +23,8 @@ Debounce::Debounce(byte pin, unsigned int period, bool pullup) {
   }
 }
 
-/* status
- *
- * Description
- *   Return LED status.
- *
- *   a_led.status(int millis_period)
- *
- * Parameters
- *   none
- *
- * Returns
- *   bool: false if LED is not blinking, true if LED is blinking
- */
+/// @brief Check if switch is pressed
+/// @return true when pressed
 bool Debounce::check() {
   _soft_state = digitalRead(_pin);
   if (_hard_state != _soft_state) {
@@ -64,19 +42,9 @@ bool Debounce::check() {
   }
 }
 
-/* set
- *
- * Description
- *   Return LED status.
- *
- *   a_led.status(int millis_period)
- *
- * Parameters
- *   none
- *
- * Returns
- *   bool: false if LED is not blinking, true if LED is blinking
- */
+/// @brief Set debounce period
+/// @param period
+/// @return
 bool Debounce::set(unsigned int period) {
   _period = period;
   return false;
