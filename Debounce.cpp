@@ -10,6 +10,10 @@
 /// @param period
 /// @param pullup
 Debounce::Debounce(byte pin, unsigned int period, bool pullup) {
+  attach(pin, period, pullup);
+}
+
+void Debounce::attach(byte pin, unsigned int period, bool pullup) {
   _pin = pin;
   _period = period;
   _pullup = pullup;
