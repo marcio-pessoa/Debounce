@@ -4,6 +4,9 @@
  * Contributors: none
  *
  * Change log
+ * 2023-04-09
+ *   add: attach function.
+ *
  * 2023-01-17
  *   add: pullup resistor support.
  *
@@ -18,7 +21,8 @@
 
 class Debounce {
  public:
-  Debounce(byte pin, unsigned int period = 50, bool pullup = false);
+  Debounce(byte pin = 1, unsigned int period = 50, bool pullup = false);
+  void attach(byte pin, unsigned int period = 50, bool pullup = false);
   bool set(unsigned int period);
   bool check();
 
